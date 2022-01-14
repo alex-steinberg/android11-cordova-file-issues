@@ -1,0 +1,7 @@
+{
+  "name": "cordova_android11_file_issues",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
