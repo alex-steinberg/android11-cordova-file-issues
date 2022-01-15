@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Android 11 file issues
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,25 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Android 11 file issues</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card>
+      <ion-item>
+        <ion-icon name="download" slot="start"></ion-icon>
+        <ion-label>Download image</ion-label>
+        <ion-button fill="outline" slot="end" (click)="fetchImage()">Download</ion-button>
+      </ion-item>
+
+      <ion-card-content>
+        <h3 class="ion-text-left ion-padding-vertical">Click 'Download' above to download an image from the web, save it to your device's filesystem and display it in the web view.</h3>
+        <h3 class="ion-text-left ion-padding-vertical">Image to download: {{ imageToDownload }}</h3>
+        <h3 class="ion-text-left ion-padding-vertical">Path to saved image: {{ fileUri }}</h3>
+        <ion-img [src]="getImageForWeb()" alt="Image not yet saved" class="ion-padding-vertical"></ion-img>
+      </ion-card-content>
+    </ion-card>
+
   </div>
 </ion-content>
